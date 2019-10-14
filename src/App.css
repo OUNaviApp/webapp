@@ -18,7 +18,8 @@ body {
 }
 
 .App-header {
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
   background-color: white;
   height: 115px;
   display: flex;
@@ -27,6 +28,7 @@ body {
   justify-content: left;
   font-size: calc(10px + 2vmin);
   color: #016a4f;
+  border-bottom: 7px solid #a28658;
 }
 
 .long {
@@ -36,6 +38,7 @@ body {
 }
 
 .menuitem {
+  padding-top: 50px;
   font-family: 'libre_baskervilleitalic';
   font-size: calc(5px + 2vmin);
   text-align: center;
@@ -56,34 +59,6 @@ body {
 .extendup {
   padding-top: 3000px;
   margin-top: -3000px;
-}
-
-.button-hazard, .button-longlong, .button-long, .button {
-  font-family: 'libre_baskervillebold';
-  font-size: 17px;
-  border: 3px solid white;
-  border-radius: 50px;
-  background-color: #016a4f;
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-  width: 50px;
-  height: 50px;
-}
-
-.button-long {
-  width: 100px
-}
-
-.button-longlong {
-  width: 200px
-}
-
-.button-hazard {
-  background-color: yellow;
-  color: #016a4f;
-  width: 50px;
-  height: 50px;
 }
 
 a {

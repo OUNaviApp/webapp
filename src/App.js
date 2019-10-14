@@ -9,20 +9,13 @@ function App() {
     <div className="App-header extendfull extendup">
           <table>
                 <tr>
-                    <td><img className="App-logo" src={logo} alt="logo" />
-                    </td>
-                    <table>
-                        {/* <tr style="height: 65px;"> </tr> */}
-                        <tr>
+                    <td><img className="App-logo" src={logo} alt="logo" /></td>
                     <td className="menuitem"><a href='file:///Users/hyperionskies/Desktop/NaviApp%20Project/navitest.html'>Home</a></td>
                     <td className="menuitem"><a href='file:///Users/hyperionskies/Desktop/NaviApp%20Project/navitest.html'>Page1</a></td>
                     <td className="menuitem"><a href='file:///Users/hyperionskies/Desktop/NaviApp%20Project/navitest.html'>Page2</a></td>
                 </tr>
-                    </table>
-                </tr>
           </table>
       </div>
-      <div className="long extendfull"></div>
       <table>
           <tr>
               <td>
@@ -31,11 +24,6 @@ function App() {
         <h2>A Header</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
-    <div className="button"><p>E</p></div>
-    <div className="button"><p>R</p></div>
-    <div className="button-hazard"><p>!</p></div>
-    <div className="button-long"><p>button</p></div>
-    <div className="button-longlong"><p>button</p></div>
     <div><Button>E</Button></div>
     <div><ButtonLong>button</ButtonLong></div>
     <div><ButtonLongLong>button</ButtonLongLong></div>
