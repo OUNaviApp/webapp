@@ -2,41 +2,102 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from './assets/navi-logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <Router>
     <div className="App-header extendfull extendup">
           <table>
                 <tr>
                     <td><img className="App-logo" src={logo} alt="logo" /></td>
-                    <td className="menuitem"><a href='file:///Users/hyperionskies/Desktop/NaviApp%20Project/navitest.html'>Home</a></td>
-                    <td className="menuitem"><a href='file:///Users/hyperionskies/Desktop/NaviApp%20Project/navitest.html'>Page1</a></td>
-                    <td className="menuitem"><a href='file:///Users/hyperionskies/Desktop/NaviApp%20Project/navitest.html'>Page2</a></td>
+                    <td className="menuitem"><Link to='/index'>Home</Link></td>
+                    <td className="menuitem"><Link to='/Page2'>Page1</Link></td>
+                    <td className="menuitem"><Link to='/index2'>Page2</Link></td>
                 </tr>
           </table>
       </div>
-      <table>
-          <tr>
-              <td>
-    <div>
-        <h1>A Large Header</h1>
-        <h2>A Header</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div><Button>E</Button></div>
-    <div><ButtonLong>button</ButtonLong></div>
-    <div><ButtonLongLong>button</ButtonLongLong></div>
-    <div><ButtonHazard>!</ButtonHazard></div>
-</td>
-{/* <td style='padding: 200px;'></td> */}
-</tr>
-</table>
-</>
+      
+<Switch>
+  <Route path='/index'>
+  <Index />
+  </Route>
+    
+  <Route path='/page2'>
+  <Page2 />
+  </Route>
+     
+  <Route path='/index2'>
+  <Index2 />
+  </Route>
+    
+</Switch>
+</Router>
   );
 }
 
 export default App;
+
+function Index() {
+  return (
+  <table>
+    <tr>
+        <td>
+<div>
+  <h1>Header 1</h1>
+  <h2>Header 2</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div><Button>E</Button></div>
+<div><ButtonLong>button</ButtonLong></div>
+<div><ButtonLongLong>button</ButtonLongLong></div>
+<div><ButtonHazard>!</ButtonHazard></div>
+</td>
+</tr>
+</table>
+)
+}
+function Page2() {
+  return (
+    <table>
+      <tr>
+          <td>
+  <div>
+    <h1>Header 1</h1>
+    <h2>Header 2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  <div><Button>E</Button></div>
+  <div><ButtonLong>button</ButtonLong></div>
+  <div><ButtonHazard>!</ButtonHazard></div>
+  </td>
+  </tr>
+  </table>
+  )
+}
+function Index2() {
+  return (
+    <table>
+      <tr>
+          <td>
+  <div>
+    <h1>Header 1</h1>
+    <h2>Header 2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  <div><Button>E</Button></div>
+  <div><ButtonLong>button</ButtonLong></div>
+  <div><ButtonLongLong>button</ButtonLongLong></div>
+  </td>
+  </tr>
+  </table>
+  )
+}
 
 const Button = styled.div`
 display: flex;
