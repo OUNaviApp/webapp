@@ -1,14 +1,18 @@
 stages:
-    - name: Publish
-      when:
-          branch: master
-          event: [push, pull_request]
-      steps:
-          - publishImageConfig:
-                dockerfilePath: ./Dockerfile
-                buildContext: .
-                tag: naviapp-webapp:${CICD_EXECUTION_SEQUENCE}
-    - name: Deploy
-      steps:
-          - applyYamlConfig:
-                path: ./deployment.yml
+- name: Publish
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: naviapp-webapp:${CICD_EXECUTION_SEQUENCE}
+      registry: 127.0.0.1:34675
+  when:
+    branch:
+      include:
+      - master
+    event: {}
+- name: Deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yml
+notification: {}
