@@ -1,109 +1,111 @@
+@font-face {
+    font-family: "libre_baskervillebold";
+    src: url("assets/librebaskerville-bold-webfont.woff2") format("woff2"),
+        url("assets/librebaskerville-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "libre_baskervilleitalic";
+    src: url("assets/librebaskerville-italic-webfont.woff2") format("woff2"),
+        url("assets/librebaskerville-italic-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "libre_baskervilleregular";
+    src: url("assets/librebaskerville-regular-webfont.woff2") format("woff2"),
+        url("assets/librebaskerville-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
 body {
-  background-color: #e7dac4;
-  color: #1d755f;
-  overflow-x: hidden;
-  padding-left: 15px;
-  padding-right: 15px;
-  font-family: 'libre_baskervilleregular';
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e7dac4;
+    color: #1d755f;
+    overflow-x: hidden;
+    font-family: "libre_baskervilleregular";
 }
 
 .frontpage {
- color: black;
- display: flex;
- align-items: center;
- justify-content: center;
- padding-top: 20%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20%;
 }
 
-.App-logo {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-  width: 100px;
-  height: auto;
-  pointer-events: none;
-  object-fit: contain;
-  vertical-align: middle;
-}
-
-.App-header {
-  background-color: #016a4f;
-  height: 10%;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  /*border-bottom: 7px solid #a28658;*/
+.header {
+    background-color: #016a4f;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    justify-content: space-around;
+    padding: 10px 0;
+    /*border-bottom: 7px solid #a28658;*/
 }
 
 .menuitem {
-  padding-left: 7%;
-  /*font-family: 'libre_baskervilleitalic';*/
-  font-size: calc(5px + 2vmin);
-  text-align: center;
-  height: 40px;
-  width: 33%;
-}
-
-.extendfull, .extendleft {
-    padding-left: 3000px;
-    margin-left: -3000px;
-}
-
-.extendfull, .extendleft {
-    padding-right: 3000px;
-    margin-right: -3000px;
-}
-
-.extendup {
-  padding-top: 3000px;
-  margin-top: -3000px;
+    /*font-family: 'libre_baskervilleitalic';*/
+    font-size: calc(5px + 2vmin);
+    text-align: center;
 }
 
 a {
-  color: #034937;
-  text-decoration: none;
+    color: #034937;
+    text-decoration: none;
 }
 
 a:visited {
-  color: #034937;
-  text-decoration: none;
+    color: #034937;
+    text-decoration: none;
 }
 
-
 a:hover {
-  text-decoration: none;
-  color: #3db154;
+    text-decoration: none;
+    color: #3db154;
 }
 
 a:active {
-  text-decoration: none;
-  color: #86ca99;
+    text-decoration: none;
+    color: #86ca99;
 }
 
-
-@font-face {
-  font-family: 'libre_baskervillebold';
-  src: url('assets/librebaskerville-bold-webfont.woff2') format('woff2'),
-       url('assets/librebaskerville-bold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
+.flex {
+    display: flex;
 }
 
-@font-face {
-  font-family: 'libre_baskervilleitalic';
-  src: url('assets/librebaskerville-italic-webfont.woff2') format('woff2'),
-       url('assets/librebaskerville-italic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
+.flex.fill {
+    flex: 1;
 }
 
-@font-face {
-  font-family: 'libre_baskervilleregular';
-  src: url('assets/librebaskerville-regular-webfont.woff2') format('woff2'),
-       url('assets/librebaskerville-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+.flex.row {
+    flex-direction: row;
+}
 
+.flex.column {
+    flex-direction: column;
+}
+
+.flex.row.horizontal-center {
+    justify-content: center;
+}
+
+.flex.row.vertical-center {
+    align-items: center;
+}
+
+.flex.column.horizontal-center {
+    align-items: center;
+}
+
+.flex.column.vertical-center {
+    justify-content: center;
 }

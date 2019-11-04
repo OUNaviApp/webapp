@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: naviapp-webapp
+    namespace: naviapp
+    labels:
+        app: naviapp-webapp
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: naviapp-webapp
+    template:
+        metadata:
+            labels:
+                app: naviapp-webapp
+        spec:
+            imagePullSecrets:
+                - name: pipeline-docker-registry
+            containers:
+                - name: naviapp-webapp
+                  image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+                  ports:
+                      - containerPort: 80
