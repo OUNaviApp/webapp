@@ -1,5 +1,5 @@
 body {
-  background-color: #d5c2a2;
+  background-color: #e7dac4;
   color: #1d755f;
   overflow-x: hidden;
   padding-left: 15px;
@@ -7,43 +7,41 @@ body {
   font-family: 'libre_baskervilleregular';
 }
 
+.frontpage {
+ color: black;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding-top: 20%;
+}
+
 .App-logo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
   width: 100px;
   height: auto;
   pointer-events: none;
   object-fit: contain;
   vertical-align: middle;
-  padding-right: 20px;
-  padding-top: 5px;
 }
 
 .App-header {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  height: 115px;
-  display: flex;
-  flex-direction: row;
-  align-items: left;
-  justify-content: left;
+  background-color: #016a4f;
+  height: 10%;
   font-size: calc(10px + 2vmin);
-  color: #016a4f;
-  border-bottom: 7px solid #a28658;
-}
-
-.long {
-  background-color: #a28658;
-  height: 7px;
-  width: auto;
+  color: white;
+  /*border-bottom: 7px solid #a28658;*/
 }
 
 .menuitem {
-  padding-top: 50px;
-  font-family: 'libre_baskervilleitalic';
+  padding-left: 7%;
+  /*font-family: 'libre_baskervilleitalic';*/
   font-size: calc(5px + 2vmin);
   text-align: center;
   height: 40px;
-  width: 120px;
+  width: 33%;
 }
 
 .extendfull, .extendleft {
