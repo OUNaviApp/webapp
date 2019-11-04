@@ -1,5 +1,5 @@
 stages:
-    - name: Build
+    - name: Publish
       when:
           branch: master
           event: [push, pull_request]
