@@ -13,8 +13,16 @@ import { Resolve } from "./pages/Resolve";
 import { General } from "./pages/General";
 import { Maintenance } from "./pages/Maintenance";
 import { Header } from "./components/Header";
+import { useLocalStorage } from "./hooks/useLocalStorage";
+import { Login } from "./pages/Login";
 
 function App() {
+    const [token] = useLocalStorage("authentication_token", undefined);
+
+    if (!token) {
+        return <Login></Login>;
+    }
+
     return (
         <Router>
             <Header />
