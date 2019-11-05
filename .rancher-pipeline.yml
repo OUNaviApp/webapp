@@ -6,10 +6,8 @@ stages:
                 buildContext: .
                 tag: naviapp-webapp:${CICD_EXECUTION_SEQUENCE}
       when:
-          branch:
-              include:
-                  - master
-          event: {}
+          branch: master
+          event: [push, pull_request]
     - name: Deploy
       steps:
           - applyYamlConfig:
